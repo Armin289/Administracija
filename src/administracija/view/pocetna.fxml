@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: #272d32; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.PocetnaController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="200.0" styleClass="pozadinameni" stylesheets="@../../libs/glavni.css">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="565.0" prefWidth="201.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="pocetna_pane" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="pocetna_btn" minHeight="45.0" onMouseClicked="#pocetna" prefHeight="50.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Početna" textAlignment="RIGHT">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin></Line>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="200.0" text="Artikli" textFill="#bdccff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin></Line>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="mobiteli_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="pregled_mobitela_btn" maxHeight="50.0" minHeight="45.0" onMouseClicked="#pregled_mobitela" prefHeight="50.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Pregled mobitela">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/smartphone-screen.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="dodaj_mobitel_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="dodaj_mobitel_btn" minHeight="45.0" onMouseClicked="#dodaj_mobitel" prefHeight="50.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Dodaj mobitel">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/dodaj_mobitel.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="tableti_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="pregled_tableta_btn" minHeight="45.0" onMouseClicked="#pregled_tableta" prefHeight="40.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Pregled tableta">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/computer-tablet.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="dodaj_tablet_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="dodaj_tablet_btn" minHeight="45.0" onMouseClicked="#dodaj_tablet" prefHeight="40.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Dodaj tablet">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/dodaj_tablet.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="oprema_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="pregled_opreme_btn" minHeight="45.0" onMouseClicked="#pregled_opreme" prefHeight="40.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Pregled opreme">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/headphones.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="dodaj_opremu_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="dodaj_opremu_btn" minHeight="45.0" onMouseClicked="#dodaj_opremu" prefHeight="40.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Dodaj opremu">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/dodaj_slusalice.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin></Line>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="200.0" text="Korisnici" textFill="#bdccff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin></Line>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="korisnici_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="pregled_korisnika_btn" minHeight="45.0" onMouseClicked="#pregled_korisnika" prefHeight="40.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Pregled korisnika">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/man-user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="40.0" prefHeight="40.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="dodaj_korisnika_pane" maxHeight="50.0" maxWidth="15.0" prefHeight="50.0" prefWidth="15.0" />
+                        <JFXButton fx:id="dodaj_korisnika_btn" minHeight="45.0" onMouseClicked="#dodaj_korisnika" prefHeight="40.0" prefWidth="200.0" style="-fx-alignment: left;" styleClass="sidemenu_btn" stylesheets="@../../libs/glavni.css" text="Dodaj korisnika">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/dodaj_korisnika.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></JFXButton>
+                     </children>
+                  </HBox>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin></Line>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="98.0" prefWidth="201.0">
+                     <children>
+                        <JFXButton fx:id="odjava_btn" onMouseClicked="#odjava" prefHeight="45.0" prefWidth="200.0" styleClass="logoutbtn" stylesheets="@../../libs/glavni.css" text="Odjavi me">
+                           <font>
+                              <Font size="14.0" />
+                           </font></JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Pane layoutX="201.0" prefHeight="25.0" prefWidth="800.0" styleClass="pozadinameni" stylesheets="@../../libs/prijava.css">
+         <children>
+            <FontAwesomeIcon fx:id="zatvori_aplikaciju" fill="WHITE" iconName="CLOSE" layoutX="765.0" layoutY="20.0" onMouseClicked="#zatvori" size="2em" />
+            <HBox fx:id="ikona_pane" alignment="CENTER" layoutX="5.0" layoutY="-1.0" onMouseClicked="#otvori_narudzbe" prefHeight="25.0" prefWidth="31.0">
+               <children>
+                  <FontAwesomeIcon fx:id="zvono" fill="DARKORANGE" iconName="BELL" onMouseClicked="#otvori_narudzbe" size="2em" />
+               </children>
+            </HBox>
+            <ImageView fitHeight="30.0" fitWidth="27.0" layoutX="730.0" layoutY="-1.0" onMouseClicked="#minimiziraj" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/minimize.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="glavni_prostor" layoutX="201.0" layoutY="25.0" prefHeight="675.0" prefWidth="800.0" />
+      <Line endX="201.2928924560547" endY="698.0" startX="201.0" stroke="WHITE" />
+   </children>
+</AnchorPane>

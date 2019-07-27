@@ -1,0 +1,31 @@
+.loginbtn{
+    -fx-background-color:  #32CD32;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #fff;
+}
+.loginbtn:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-text-fill:  #32CD32;
+    -fx-border-color:  #32CD32;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+.pozadinabijela{
+    -fx-background-color: #FFFFFF;
+}
+.pozadinameni{
+    -fx-background-color: #272d32;
+}
+
+.text_field{
+	-fx-text-fill:  #272D32;
+	-jfx-focus-color: #DC143C;
+	-jfx-unfocus-color: #272D32;
+	-fx-prompt-text-fill: #272D32;
+	-fx-text-inner-color: #272D32;
+	-fx-text-base-color: #272D32;
+	-fx-font-size: 14px;
+}
+

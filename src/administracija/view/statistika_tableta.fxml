@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Statistika_tabletaController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="675.0" prefWidth="800.0">
+         <children>
+            <HBox prefHeight="250.0" prefWidth="800.0">
+               <children>
+                  <VBox prefHeight="175.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Statistika za:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="naziv_txt" text="Naziv artikla" textFill="RED">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Artikal je prodan ukupno u:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="broj_prodanih" text="Broj" underline="true">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="primjeraka">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Ukupna zarada na artiklu:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ukupna_zarada" text="Cijena" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="KM">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Datum zadnje kupovine:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="zadnja_kupovina" text="Datum" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_RIGHT" prefHeight="175.0" prefWidth="400.0">
+                     <children>
+                        <ImageView fx:id="slika_img" fitHeight="231.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                     <padding>
+                        <Insets right="25.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="425.0" prefWidth="800.0" style="-fx-background-color: #D3D3D3;;" styleClass="pregled_ikone" stylesheets="@../../libs/glavni.css">
+               <children>
+                  <PieChart fx:id="pieChart" animated="false" prefHeight="425.0" prefWidth="800.0" title="Udio u prodaji" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

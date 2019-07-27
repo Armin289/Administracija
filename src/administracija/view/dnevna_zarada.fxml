@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Dnevna_zaradaController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="675.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="800.0">
+               <children>
+                  <Label text="Današnja zarada iznosi: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dnevna_zarada" text="Zarada" textFill="CRIMSON">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="KM">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <VBox prefWidth="339.0">
+                     <children>
+                        <Label text="od čega:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="85.0" text="Smartphone:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="zarada_smartphone_txt" text="Zarada smartphone" textFill="CRIMSON">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefWidth="200.0">
+                           <children>
+                              <Label prefWidth="85.0" text="Tablet:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="zarada_tablet_txt" text="Zarada tableti" textFill="CRIMSON">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefWidth="200.0">
+                           <children>
+                              <Label prefWidth="85.0" text="Oprema:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="zarada_oprema_txt" text="Zarada oprema" textFill="CRIMSON">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <PieChart fx:id="pieChartZarada" prefHeight="283.0" prefWidth="800.0" title="Udio zarade" titleSide="RIGHT" />
+            <Label fx:id="udio_zarade_txt" text="Udio zarade" />
+            <PieChart fx:id="pieChartUdio" prefHeight="266.0" prefWidth="800.0" title="Udio artikala" titleSide="RIGHT" />
+            <Label fx:id="udio_artikala_txt" text="Udio pojedinih artikala" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

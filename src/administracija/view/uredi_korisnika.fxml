@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Uredi_korisnikaController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="glavni_prostor" prefHeight="635.0" prefWidth="800.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="635.0" prefWidth="800.0">
+               <children>
+                  <JFXTextField fx:id="ime_kupca" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="148.0" maxWidth="300.0" prefWidth="300.0" promptText="Ime" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="prezime_kupca" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="135.0" maxWidth="300.0" prefWidth="250.0" promptText="Prezime" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="email_kupca" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="148.0" maxWidth="300.0" prefWidth="250.0" promptText="Email" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label maxWidth="300.0" text="Podaci za dostavu" textFill="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="adresa_kupca" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="35.0" layoutY="215.0" maxWidth="300.0" prefWidth="250.0" promptText="Adresa" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="grad_kupca" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="305.0" maxWidth="300.0" prefWidth="250.0" promptText="Grad" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="postanski_broj_kupca" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="318.0" maxWidth="300.0" prefWidth="250.0" promptText="Poštanski broj" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="telefon_kupca" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="330.0" maxWidth="300.0" prefWidth="250.0" promptText="Broj telefona" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="spremi_btn" maxWidth="300.0" onMouseClicked="#spremi" styleClass="spremi_btn" stylesheets="@../../libs/glavni.css" text="Spremi">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Label fx:id="label_greska" alignment="CENTER" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

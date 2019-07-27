@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Statistika_kupcaController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <HBox alignment="TOP_CENTER" layoutY="307.0" prefHeight="368.0" prefWidth="800.0">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="400.0" prefHeight="217.0" prefWidth="400.0">
+               <children>
+                  <PieChart fx:id="pieChartZarada" prefHeight="267.0" prefWidth="250.0" title="Udio zarade" />
+                  <Label fx:id="zarada_txt">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" maxWidth="400.0" prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <PieChart fx:id="pieChartArtikli" prefHeight="266.0" prefWidth="400.0" title="Kupljeni artikli" />
+                  <Label fx:id="udio_txt">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
+               <children>
+                  <Label text="Korisnik">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="ime_prezime_txt" text="Ime i Prezime" textFill="MIDNIGHTBLUE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="Zarada od korisnika:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="zarada_odabranog_korisnika_txt" text="Iznos">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="KM">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Label text="Datum zadnje kupovine:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="datum_zadnje_kupnje_txt" text="Datum">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="200.0">
+               <children>
+                  <Label text="Broj kupljenih artikala">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="broj_kupljenih_artikala_txt" text="Broj">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="300.0" prefHeight="300.0" prefWidth="500.0">
+         <children>
+            <TableView fx:id="tablica_racuna" prefHeight="301.0" prefWidth="500.0">
+              <columns>
+                <TableColumn fx:id="naziv" prefWidth="232.0" text="Naziv" />
+                <TableColumn fx:id="kolicina" prefWidth="77.0" text="Količina" />
+                  <TableColumn fx:id="ukupno" prefWidth="87.0" text="Ukupno" />
+                  <TableColumn fx:id="datum" prefWidth="97.0" text="Datum" />
+              </columns>
+               <VBox.margin>
+                  <Insets right="5.0" top="5.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

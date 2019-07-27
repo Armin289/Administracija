@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Statistika_korisnikaController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="675.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="49.0" prefWidth="800.0">
+               <children>
+                  <JFXTextField fx:id="pretraga_txt" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="300.0" onKeyReleased="#pretrazi" prefWidth="300.0" promptText="Unesite pojam za pretragu" unFocusColor="DARKSLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></JFXTextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="300.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tabela_mobitela" maxWidth="500.0" onMouseClicked="#postaviPodatke" prefHeight="296.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="ime" prefWidth="144.0" text="Ime" />
+                      <TableColumn fx:id="prezime" prefWidth="144.0" text="Prezime" />
+                        <TableColumn fx:id="email" prefWidth="209.0" text="Email" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TableView>
+                  <VBox alignment="TOP_RIGHT" prefHeight="300.0" prefWidth="298.0">
+                     <children>
+                        <Label text="Zarada od odabranog korisnika:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="zarada_odabranog_korisnika_txt" alignment="CENTER_RIGHT" maxWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Ukupan broj kupljenih artikala:">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="broj_kupljenih_artikala_txt" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Datum zadnje kupovine:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="datum_zadnje_kupnje_txt" alignment="CENTER_RIGHT" maxWidth="200.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="20.0" top="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="317.0" prefWidth="800.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" maxWidth="400.0" prefHeight="217.0" prefWidth="400.0">
+                     <children>
+                        <PieChart fx:id="pieChartZarada" prefHeight="267.0" prefWidth="250.0" title="Udio zarade" />
+                        <Label fx:id="zarada_txt">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" maxWidth="400.0" prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <PieChart fx:id="pieChartArtikli" prefHeight="266.0" prefWidth="400.0" title="Kupljeni artikli" />
+                        <Label fx:id="udio_txt">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

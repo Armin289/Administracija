@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Pregled_korisnikaController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="40.0" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: #272d32;">
+               <children>
+                  <JFXButton fx:id="korisnik_btn" maxWidth="400.0" onMouseClicked="#dodaj_kupca" prefHeight="30.0" prefWidth="400.0" styleClass="korisnicibtn" stylesheets="@../../libs/glavni.css" text="Lista kupaca">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane fx:id="korisnik_pane" maxHeight="10.0" prefHeight="10.0" prefWidth="400.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: #272d32;">
+               <children>
+                  <JFXButton fx:id="administrator_btn" maxHeight="30.0" onMouseClicked="#dodaj_administratora" prefHeight="30.0" prefWidth="400.0" styleClass="korisnicibtn" stylesheets="@../../libs/glavni.css" text="Lista administratora">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane fx:id="administrator_pane" maxHeight="10.0" prefHeight="10.0" prefWidth="400.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane fx:id="prikaz" layoutY="40.0" prefHeight="635.0" prefWidth="800.0" />
+   </children>
+</AnchorPane>

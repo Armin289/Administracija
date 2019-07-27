@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Lista_narudzbiController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="675.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="tabela_racuna" onMouseClicked="#postaviRacun" prefHeight="265.0" prefWidth="783.0" stylesheets="@../../libs/glavni.css">
+              <columns>
+                  <TableColumn fx:id="naziv" prefWidth="197.0" text="Naziv artikla" />
+                  <TableColumn fx:id="kolicina" prefWidth="49.0" text="Količina" />
+                  <TableColumn fx:id="dostava" prefWidth="148.0" text="Dostava" />
+                  <TableColumn fx:id="grad" prefWidth="104.0" text="Grad" />
+                  <TableColumn fx:id="ulica" prefWidth="107.0" text="Ulica" />
+                  <TableColumn fx:id="datum" prefWidth="83.0" text="Datum" />
+                  <TableColumn fx:id="vrijeme" prefWidth="101.0" text="Vrijeme" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="399.0" prefWidth="790.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="395.0">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <children>
+                        <JFXTextField fx:id="naziv_artikla_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="250.0" promptText="Naziv artikla" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE" />
+                        <JFXTextField fx:id="kolicina_txt" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="83.0" layoutY="30.0" maxWidth="250.0" promptText="Količina" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox alignment="CENTER" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="ukupna_cijena_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="225.0" prefWidth="225.0" promptText="Ukupna cijena" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE" />
+                              <JFXTextField alignment="CENTER_RIGHT" editable="false" focusColor="DARKSLATEBLUE" maxWidth="25.0" promptText="KM" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <JFXTextField fx:id="nacin_preuzimanja_txt" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="83.0" layoutY="75.0" maxWidth="250.0" promptText="Način preuzimanja" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="datum_kupovine_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="83.0" layoutY="120.0" maxWidth="250.0" promptText="Datum kupovine" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="vrijeme_kupovine_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="83.0" layoutY="165.0" maxWidth="250.0" promptText="Vrijeme kupovine" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="395.0">
+                     <children>
+                        <JFXTextField fx:id="ime_kupca_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="250.0" prefWidth="250.0" promptText="Ime kupca" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE" />
+                        <JFXTextField fx:id="prezime_kupca_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="250.0" prefWidth="250.0" promptText="Prezime kupca" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="ulica_kupca_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="250.0" prefWidth="250.0" promptText="Ulica kupca" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="grad_kupca_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="250.0" prefWidth="250.0" promptText="Grad kupca" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="postanski_broj_txt" editable="false" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="250.0" prefWidth="250.0" promptText="Poštanski broj kupca" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="spremi_btn" onMouseClicked="#prihvati" prefWidth="250.0" styleClass="spremi_btn" stylesheets="@../../libs/glavni.css" text="Prihvati narudžbu">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="obrisi_btn" layoutX="83.0" layoutY="265.0" onMouseClicked="#obrisi" prefWidth="250.0" styleClass="odaberi_sliku_btn" stylesheets="@../../libs/glavni.css" text="Obriši">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

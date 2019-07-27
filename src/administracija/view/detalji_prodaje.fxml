@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="675.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Detalji_prodajeController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="675.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="87.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="pretraga_txt" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="300.0" onKeyReleased="#pretrazi" prefWidth="300.0" promptText="Unesite pojam za pretragu" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="800.0">
+               <children>
+                  <TableView fx:id="tabela_mobitela" maxWidth="720.0" onMouseClicked="#postavi_artikal" prefHeight="380.0" prefWidth="610.0">
+                     <columns>
+                        <TableColumn fx:id="naziv" prefWidth="200.0" text="Naziv" />
+                        <TableColumn fx:id="cijena" prefWidth="88.0" text="Cijena" />
+                        <TableColumn fx:id="garancija" minWidth="0.0" prefWidth="121.0" text="Garancija" />
+                        <TableColumn fx:id="OS" minWidth="0.0" prefWidth="170.0" text="OS" />
+                        <TableColumn fx:id="proizvodjac" minWidth="0.0" prefWidth="134.0" text="Proizvođač" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="225.0" prefWidth="600.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="590.0">
+                     <children>
+                        <Label text="Odabrani artikal je prodan u ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="broj_prodanih_txt" minWidth="15.0" textFill="DARKSLATEBLUE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text=" primjeraka">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <PieChart fx:id="barChart" prefHeight="227.0" prefWidth="373.0" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

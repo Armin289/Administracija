@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.PrijavaController">
+   <children>
+      <FontAwesomeIcon fill="#f2f2f2" iconName="CLOSE" layoutX="572.0" layoutY="18.0" size="2EM" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </FontAwesomeIcon>
+      <HBox prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox alignment="CENTER" maxWidth="400.0" minWidth="300.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #272d32;">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Administracija " textFill="#eeeeee">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="50.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="400.0" styleClass="pozadinabijela" stylesheets="@../../libs/prijava.css">
+               <children>
+                  <Pane prefHeight="25.0" prefWidth="400.0" style="-fx-background-color: #272d32;">
+                     <children>
+                        <FontAwesomeIcon fx:id="zatvori_aplikaciju" fill="#f2f2f2" iconName="CLOSE" layoutX="369.0" layoutY="21.0" onMouseClicked="#zatvori" size="2EM" text="">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </FontAwesomeIcon>
+                        <ImageView fitHeight="30.0" fitWidth="27.0" layoutX="335.0" layoutY="-1.0" onMouseClicked="#minimiziraj" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <VBox alignment="CENTER" prefHeight="575.0" prefWidth="400.0" style="-fx-border-color: #272d32; -fx-border-width: 1;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/administration-header.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="korisnicko_ime_txt" focusColor="CRIMSON" labelFloat="true" maxWidth="250.0" onMouseClicked="#ponisti" prefWidth="250.0" promptText="Unesite korisničko ime" styleClass="text_field" stylesheets="@../../libs/prijava.css" unFocusColor="#272d32">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="lozinka_txt" focusColor="CRIMSON" labelFloat="true" maxWidth="250.0" onMouseClicked="#ponisti" prefWidth="400.0" promptText="Unesite lozinku" styleClass="text_field" stylesheets="@../../libs/prijava.css" unFocusColor="#272d32">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="prijava_btn" maxHeight="40.0" maxWidth="250.0" onMouseClicked="#prijavi_se" prefHeight="30.0" prefWidth="150.0" styleClass="loginbtn" text="Prijava">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <Label fx:id="greska_lbl" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

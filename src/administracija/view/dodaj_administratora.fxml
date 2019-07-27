@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracija.controller.Dodaj_administratoraController">
+    <stylesheets>
+        <URL value="@/libs/glavni.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" prefHeight="635.0" prefWidth="800.0">
+         <children>
+            <JFXTextField fx:id="ime_administratora" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="148.0" maxWidth="300.0" prefWidth="250.0" promptText="Ime" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="prezime_administratora" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="135.0" maxWidth="300.0" prefWidth="250.0" promptText="Prezime" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="email_administratora" focusColor="DARKSLATEBLUE" labelFloat="true" layoutX="185.0" layoutY="148.0" maxWidth="300.0" prefWidth="250.0" promptText="Email administratora" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="korisnicko_ime_administratora" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="300.0" prefWidth="250.0" promptText="Korisničko ime administratora" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="lozinka_administratora" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="300.0" prefWidth="250.0" promptText="Lozinka administratora" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="potvrda_lozinke_administratora" focusColor="DARKSLATEBLUE" labelFloat="true" maxWidth="300.0" prefWidth="250.0" promptText="Potvrda lozinke administratora" styleClass="text_field" stylesheets="@../../libs/glavni.css" unFocusColor="DARKSLATEBLUE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="spremi_btn" maxWidth="300.0" onMouseClicked="#spremi" styleClass="spremi_btn" stylesheets="@../../libs/glavni.css" text="Spremi">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="ocisti_btn" maxWidth="300.0" onMouseClicked="#ponisti" styleClass="ponisti_btn" stylesheets="@../../libs/glavni.css" text="Očisti polja">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Label fx:id="label_greska" alignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
