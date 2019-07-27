@@ -14,3 +14,4 @@ Also, the app offers information such as:
   monthly statistics, 
   daily statistics, 
   annual statistics
+
